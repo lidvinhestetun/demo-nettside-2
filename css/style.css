@@ -624,3 +624,56 @@ h1 {
     border-color: #94a3b8;
     transform: translateY(-2px);
 }
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #dbeafe;
+
+    --neutral-light: #f8fafc;
+    --neutral-mid: #e2e8f0;
+    --neutral-border: #cbd5e1;
+
+    --text-main: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
+    --accent: #f59e0b;
+}
+body {
+    color: var(--text-main);
+}
+
+.section-intro,
+.card p,
+.service-card p,
+.process-step p,
+.review p {
+    color: var(--text-muted);
+}
+
+.btn,
+.button,
+.cta-btn {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn:hover,
+.button:hover,
+.cta-btn:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--neutral-light);
+    color: var(--text-main);
+    border: 1px solid var(--neutral-border);
+}
+
+.section {
+    background: var(--neutral-light);
+}
+
+.section-alt {
+    background: var(--neutral-mid);
+}
