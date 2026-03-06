@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tjenester – Rørlegger AS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <span class="logo-mark">R</span>
+            <span class="logo-text">Rørlegger AS</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Hjem</a>
+            <a href="tjenester.html" class="active">Tjenester</a>
+            <a href="om-oss.html">Om oss</a>
+            <a href="prosjekter.html">Prosjekter</a>
+            <a href="priser.html">Priser</a>
+            <a href="faq.html">FAQ</a>
+            <a href="bestill-befaring.html">Bestill befaring</a>
+            <a href="kontakt.html" class="nav-cta">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<section class="sub-hero">
+    <div class="container">
+        <h1>Våre tjenester</h1>
+        <p>Profesjonelle rørleggertjenester for private, borettslag og små bedrifter.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container services-grid">
+        <div class="service-card">
+            <h3>Rørservice og reparasjoner</h3>
+            <p>Vi håndterer lekkasjer, tette rør, utskifting av koblinger og små reparasjoner.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Bad og kjøkken</h3>
+            <p>Montering av armatur, utskifting av rør, tilkobling av oppvaskmaskin og annet utstyr.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Feilsøking</h3>
+            <p>Vi finner årsaken til problemer og gir en ærlig vurdering av hva som lønner seg.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Prosjektsamarbeid</h3>
+            <p>Vi samarbeider med andre håndverkere i mindre prosjekter og rehabilitering.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
