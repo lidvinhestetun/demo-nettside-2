@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss – Rørlegger AS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <span class="logo-mark">R</span>
+            <span class="logo-text">Rørlegger AS</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Hjem</a>
+            <a href="tjenester.html">Tjenester</a>
+            <a href="om-oss.html" class="active">Om oss</a>
+            <a href="prosjekter.html">Prosjekter</a>
+            <a href="priser.html">Priser</a>
+            <a href="faq.html">FAQ</a>
+            <a href="bestill-befaring.html">Bestill befaring</a>
+            <a href="kontakt.html" class="nav-cta">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<section class="sub-hero">
+    <div class="container">
+        <h1>Om oss</h1>
+        <p>En ny rørleggerbedrift med fokus på kvalitet, trygghet og moderne løsninger.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container about">
+        <p>Rørlegger AS er en ny aktør i Oslo. Vi bygger oss opp steg for steg, med fokus på kvalitet, trygghet og god dialog med kundene våre.</p>
+
+        <p>Som liten bedrift er vi fleksible, tilgjengelige og opptatt av å levere arbeid vi kan stå inne for. Vi ønsker å være rørleggeren du faktisk får tak i – uten lange ventetider eller uklare avtaler.</p>
+
+        <p>Vi kombinerer moderne arbeidsmetoder med tradisjonelt håndverk, og jobber for å gi kundene våre en trygg og ryddig opplevelse fra start til slutt.</p>
+    </div>
+</section>
+
+</body>
+</html>
