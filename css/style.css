@@ -115,7 +115,8 @@ body {
     position: relative;
     padding: 5rem 0 5.5rem;
     color: #e5e7eb;
-    overflow: hidden;
+   overflow: visible;
+
     z-index: 0;
 }
 
