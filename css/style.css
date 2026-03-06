@@ -232,9 +232,10 @@ body {
 /* SEKSJONER */
 
 .section {
-    padding: 4rem 0;
+    padding: 5rem 0 5.5rem;
     background: #f8fafc;
 }
+
 
 .section-alt {
     background: #e5e7eb;
