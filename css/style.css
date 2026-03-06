@@ -542,3 +542,44 @@ h1 {
         font-size: 0.97rem;
     }
 }
+/* KORT – moderne premium-design */
+
+/* Standard kort */
+.card,
+.service-card,
+.process-step,
+.review {
+    border-radius: 14px; /* mykere hjørner */
+    padding: 1.9rem 2rem; /* mer luft */
+    border: 1px solid rgba(226, 232, 240, 0.7); /* mykere kant */
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12); /* mykere skygge */
+    background: #ffffff;
+}
+
+/* Kort-titler */
+.card h3,
+.service-card h3,
+.process-step h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.005em;
+}
+
+/* Kort-tekst */
+.card p,
+.service-card p,
+.process-step p,
+.review p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* Grid spacing rundt kort */
+.services-grid,
+.why-grid,
+.process,
+.reviews {
+    gap: 2rem; /* mer luft mellom kort */
+}
