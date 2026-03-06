@@ -154,7 +154,7 @@ body {
 }
 
 /* =========================================================
-   HERO – optimalisert for lyse og detaljerte bilder
+   HERO – optimalisert for mørkt industrielt bilde
    ========================================================= */
 
 .hero {
@@ -163,7 +163,7 @@ body {
     color: #ffffff;
 }
 
-/* Bakgrunnsbilde – kraftig dempet for å unngå støy */
+/* Bakgrunnsbilde */
 .hero::before {
     content: "";
     position: absolute;
@@ -171,19 +171,19 @@ body {
     background-image: url("../img/hero-industrial.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.18; /* svært lav lysstyrke */
-    filter: grayscale(40%) brightness(0.45) contrast(0.7);
+    opacity: 0.28;
+    filter: grayscale(25%) brightness(0.65) contrast(0.85);
     z-index: -1;
 }
 
-/* Overlay – nesten helsort for maksimal tekstkontrast */
+/* Overlay */
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.90),
-        rgba(0, 0, 0, 0.96)
+        rgba(0, 0, 0, 0.82),
+        rgba(0, 0, 0, 0.94)
     );
     z-index: -2;
 }
@@ -197,7 +197,7 @@ body {
     align-items: center;
 }
 
-/* Tittel – ren hvit + kraftig skygge */
+/* Tittel */
 .hero-text h1 {
     font-size: clamp(2.4rem, 3vw + 1rem, 3.2rem);
     color: #ffffff;
@@ -206,7 +206,7 @@ body {
     letter-spacing: -0.01em;
 }
 
-/* Brødtekst – hvitere og mer punch */
+/* Brødtekst */
 .hero-text p {
     color: #f1f5f9;
     font-size: 1.15rem;
@@ -215,7 +215,7 @@ body {
     text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
 }
 
-/* Badge – mer kontrast */
+/* Badge */
 .hero-badge {
     background: rgba(0, 0, 0, 0.75);
     border-radius: var(--radius);
@@ -253,9 +253,6 @@ body {
         font-size: 1rem;
     }
 }
-
-
-
 
 /* =========================================================
    6. KNAPPER
@@ -320,7 +317,7 @@ body {
 }
 
 /* =========================================================
-   8. FOOTER (NY OG KONSISTENT)
+   8. FOOTER
    ========================================================= */
 
 footer {
@@ -388,4 +385,5 @@ footer p {
         padding: 2.8rem 0;
     }
 }
+
 
