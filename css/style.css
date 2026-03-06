@@ -163,7 +163,6 @@ body {
     color: #ffffff;
 }
 
-/* Bakgrunnsbilde – LYSERE */
 .hero::before {
     content: "";
     position: absolute;
@@ -171,24 +170,22 @@ body {
     background-image: url("../img/hero-industrial.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.45; /* ØKT fra 0.28 */
-    filter: grayscale(15%) brightness(0.85) contrast(0.95); /* LYSERE */
+    opacity: 0.45;
+    filter: grayscale(15%) brightness(0.85) contrast(0.95);
     z-index: -1;
 }
 
-/* Overlay – LYSERE */
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.55), /* tidligere 0.82 */
-        rgba(0, 0, 0, 0.70)  /* tidligere 0.94 */
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.70)
     );
     z-index: -2;
 }
 
-/* Layout */
 .hero-inner {
     position: relative;
     display: grid;
@@ -197,7 +194,6 @@ body {
     align-items: center;
 }
 
-/* Tittel */
 .hero-text h1 {
     font-size: clamp(2.4rem, 3vw + 1rem, 3.2rem);
     color: #ffffff;
@@ -206,7 +202,6 @@ body {
     letter-spacing: -0.01em;
 }
 
-/* Brødtekst */
 .hero-text p {
     color: #f1f5f9;
     font-size: 1.15rem;
@@ -215,7 +210,6 @@ body {
     text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
 }
 
-/* Badge */
 .hero-badge {
     background: rgba(0, 0, 0, 0.75);
     border-radius: var(--radius);
@@ -235,7 +229,6 @@ body {
     color: #e2e8f0;
 }
 
-/* Mobil */
 @media (max-width: 800px) {
     .hero {
         padding: 3.5rem 0 4rem;
@@ -385,39 +378,21 @@ footer p {
         padding: 2.8rem 0;
     }
 }
+
 /* =========================================================
-   SUBPAGE HERO
+   SUBPAGE HERO – NY, OPTIMAL OG RENSKET
    ========================================================= */
 
 .subpage-hero {
     position: relative;
-    padding: 4rem 0;
-    color: #ffffff;
-    margin-bottom: 2rem;
-}
-
-.subpage-hero-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.45;
-    filter: grayscale(15%) brightness(0.85) contrast(0.95);
-    z-index: -1;
-}
-
-.subpage-hero-inner h1 {
-    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
-    margin: 0;
-    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.85);
-}
-.subpage-hero {
-    position: relative;
-    height: 300px; /* GI HERO-SEKSJONEN HØYDE */
+    height: 360px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     color: #ffffff;
-    margin-bottom: 2rem;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
 }
 
 .subpage-hero-bg {
@@ -425,16 +400,42 @@ footer p {
     inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0.45;
-    filter: grayscale(15%) brightness(0.85) contrast(0.95);
+    background-repeat: no-repeat;
+    z-index: -2;
+    filter: grayscale(12%) brightness(0.78) contrast(1.05);
+}
+
+.subpage-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.75)
+    );
     z-index: -1;
 }
 
+.subpage-hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
 .subpage-hero-inner h1 {
-    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+    font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
     margin: 0;
+    font-weight: 700;
     text-shadow: 0 8px 28px rgba(0, 0, 0, 0.85);
 }
+
+.subpage-hero-inner p {
+    margin-top: 0.6rem;
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
+}
+
 
 
 
