@@ -1,20 +1,37 @@
+/* =========================================================
+   1. ROOT-VARIABLER
+   ========================================================= */
+
 :root {
-    --bg: #0f172a;
-    --bg-alt: #f1f5f9;
-    --text: #0f172a;
-    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #dbeafe;
+
     --accent: #38bdf8;
     --accent-dark: #0ea5e9;
+
+    --neutral-light: #f8fafc;
+    --neutral-mid: #e2e8f0;
+    --neutral-border: #cbd5e1;
+
+    --text-main: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
     --card-bg: #ffffff;
-    --border-soft: #e2e8f0;
-    --radius: 10px;
-    --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.18);
-    --max-width: 1100px;
-    --transition: 0.2s ease;
+
+    --radius: 14px;
+    --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+    --transition: 0.25s ease;
+    --max-width: 1200px;
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* RESET LITE */
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
 *,
 *::before,
 *::after {
@@ -24,20 +41,51 @@
 body {
     margin: 0;
     font-family: var(--font-main);
-    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
     background: #e5e7eb;
+    color: var(--text-main);
 }
 
-/* LAYOUT */
+/* =========================================================
+   3. LAYOUT
+   ========================================================= */
 
 .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     width: 90%;
     margin: 0 auto;
 }
 
+.section {
+    padding: 5rem 0 5.5rem;
+    background: var(--neutral-light);
+}
 
-/* HEADER */
+.section-alt {
+    background: var(--neutral-mid);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
 
 .site-header {
     position: sticky;
@@ -67,17 +115,13 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 999px;
-    background: radial-gradient(circle at 30% 30%, #38bdf8, #0f172a);
+    background: radial-gradient(circle at 30% 30%, var(--accent), #0f172a);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     color: #e5e7eb;
     font-size: 0.95rem;
-}
-
-.logo-text {
-    letter-spacing: 0.03em;
 }
 
 .main-nav {
@@ -109,15 +153,14 @@ body {
     background: var(--accent-dark);
 }
 
-/* HERO */
+/* =========================================================
+   5. HERO
+   ========================================================= */
 
 .hero {
     position: relative;
-    padding: 5rem 0 5.5rem;
+    padding: 4rem 0 4.5rem;
     color: #e5e7eb;
-   overflow: visible;
-
-    z-index: 0;
 }
 
 .hero::before {
@@ -127,8 +170,8 @@ body {
     background-image: url("../img/plumber-hero-bg.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.55;
-    filter: grayscale(15%);
+    opacity: 0.40;
+    filter: grayscale(10%) brightness(1.15);
     z-index: -1;
 }
 
@@ -136,13 +179,12 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at top left, rgba(15, 23, 42, 0.7), transparent 55%),
-        linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98));
+        radial-gradient(circle at top left, rgba(15, 23, 42, 0.55), transparent 55%),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.90));
     z-index: -2;
 }
 
 .hero-inner {
-    position: relative;
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     gap: 2.5rem;
@@ -150,565 +192,93 @@ body {
 }
 
 .hero-text h1 {
-    font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
-    margin: 0 0 1rem;
-}
-
-.hero-text p {
-    margin: 0 0 1.25rem;
-    color: #cbd5f5;
-    line-height: 1.6;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.hero-note {
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
-
-.hero-badge {
-    justify-self: flex-end;
-    background: rgba(15, 23, 42, 0.9);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(148, 163, 184, 0.5);
-    max-width: 260px;
-}
-
-.hero-badge p {
-    margin: 0 0 0.25rem;
-    font-weight: 600;
-}
-
-.hero-badge span {
-    font-size: 0.9rem;
-    color: #cbd5f5;
-}
-
-/* KNAPPER */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.6rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background: var(--accent);
-    color: #0f172a;
-    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
-}
-
-.btn-primary:hover {
-    background: var(--accent-dark);
-    box-shadow: 0 16px 40px rgba(56, 189, 248, 0.45);
-}
-
-.btn-ghost {
-    background: transparent;
-    color: #e5e7eb;
-    border-color: rgba(148, 163, 184, 0.7);
-}
-
-.btn-ghost:hover {
-    background: rgba(15, 23, 42, 0.7);
-}
-
-/* SEKSJONER */
-
-.section {
-    padding: 5rem 0 5.5rem;
-    background: #f8fafc;
-}
-
-
-.section-alt {
-    background: #e5e7eb;
-}
-
-.section h2 {
-    text-align: center;
-    margin: 0 0 1rem;
-    font-size: 1.7rem;
-}
-
-.section-intro {
-    max-width: 650px;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-    color: var(--muted);
-    line-height: 1.6;
-}
-
-/* GRID / KORT */
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.why-grid {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-.card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.5rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--border-soft);
-}
-
-.card h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-}
-
-.card p {
-    margin: 0;
-    color: var(--muted);
-}
-
-/* TJENESTER */
-
-.services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-.service-card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.5rem;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-soft);
-}
-
-.service-card h3 {
-    margin: 0 0 0.5rem;
-}
-
-.service-card p {
-    margin: 0;
-    color: var(--muted);
-}
-
-/* PROSESS */
-
-.process {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.process-step {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 1.4rem 1.5rem;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-soft);
-}
-
-.step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 999px;
-    background: var(--accent);
-    color: #0f172a;
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-/* KUNDEOMTALER */
-
-.reviews {
-    display: grid;
-    gap: 1.25rem;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.review {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 1.3rem 1.4rem;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-soft);
-}
-
-.review p {
-    margin: 0 0 0.4rem;
-    font-style: italic;
-}
-
-.review span {
-    font-size: 0.9rem;
-    color: var(--muted);
-}
-
-/* OM OSS */
-
-.about {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--muted);
-    line-height: 1.7;
-}
-
-/* KONTAKT */
-
-.contact-section {
-    background: #0f172a;
-    color: #e5e7eb;
-}
-
-.contact-section h2 {
-    color: #e5e7eb;
-}
-
-.contact-section .section-intro {
-    color: #cbd5f5;
-}
-
-.contact-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.contact-grid h3 {
-    margin-top: 0;
-}
-
-.contact-grid p {
-    margin: 0.25rem 0;
-}
-
-/* FOOTER */
-
-.site-footer {
-    background: #020617;
-    color: #94a3b8;
-    padding: 1.8rem 0 2.2rem;
-    font-size: 0.9rem;
-}
-
-.footer-inner {
-    text-align: center;
-}
-
-.footer-note {
-    margin-top: 0.3rem;
-    color: #64748b;
-}
-
-/* RESPONSIVT */
-
-@media (max-width: 800px) {
-    .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-badge {
-        justify-self: flex-start;
-        margin-top: 1.5rem;
-    }
-
-    .main-nav {
-        display: none; /* enkel mobilvariant – kan bygges ut senere */
-    }
-
-    .site-header {
-        position: static;
-    }
-}
-/* TYPOGRAFI – moderne og premium */
-
-/* Generell tekst */
-body {
-    font-size: 1rem;
-    line-height: 1.65;
-    letter-spacing: 0.01em;
-}
-
-/* H1 – hero og store overskrifter */
-h1 {
     font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    font-weight: 700;
-}
-
-/* H2 – seksjonstitler */
-.section h2 {
-    font-size: 1.9rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.8rem;
-}
-
-/* H3 – korttitler */
-.card h3,
-.service-card h3,
-.process-step h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: -0.005em;
-}
-
-/* Brødtekst i kort */
-.card p,
-.service-card p,
-.process-step p,
-.review p,
-.about,
-.section-intro {
-    font-size: 1rem;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-}
-
-/* Mobiljusteringer */
-@media (max-width: 800px) {
-    h1 {
-        font-size: 2rem;
-        line-height: 1.25;
-    }
-
-    .section h2 {
-        font-size: 1.6rem;
-    }
-
-    body {
-        font-size: 0.97rem;
-    }
-}
-/* HERO – lysere og mer moderne */
-.hero::before {
-    opacity: 0.40; /* litt lysere bakgrunnsbilde */
-    filter: grayscale(10%) brightness(1.15);
-}
-
-.hero-bg-overlay {
-    background:
-        radial-gradient(circle at top left, rgba(15, 23, 42, 0.55), transparent 55%),
-        linear-gradient(to bottom, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.90));
-}
-.hero-text h1 {
     color: #f1f5f9;
-    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
 }
 
 .hero-text p {
     color: #dbeafe;
     line-height: 1.7;
+    margin-bottom: 1.25rem;
 }
-.hero {
-    padding: 4rem 0 4.5rem;
-}
-.hero-badge {
-    padding: 1.6rem 1.8rem;
-    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.22);
-    border: 1px solid rgba(148, 163, 184, 0.35);
-}
-@media (max-width: 800px) {
-    .hero {
-        padding: 3rem 0 3.5rem;
-    }
 
-    .hero-text h1 {
-        font-size: 1.9rem;
-    }
+/* =========================================================
+   6. KNAPPER
+   ========================================================= */
 
-    .hero-text p {
-        font-size: 0.97rem;
-    }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.6rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    transition: var(--transition);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
 }
-/* KORT – moderne premium-design */
 
-/* Standard kort */
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================================================
+   7. GRID / KORT
+   ========================================================= */
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
 .card,
 .service-card,
 .process-step,
 .review {
-    border-radius: 14px; /* mykere hjørner */
-    padding: 1.9rem 2rem; /* mer luft */
-    border: 1px solid rgba(226, 232, 240, 0.7); /* mykere kant */
-    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12); /* mykere skygge */
-    background: #ffffff;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.9rem 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.7);
+    box-shadow: var(--shadow-soft);
 }
 
-/* Kort-titler */
 .card h3,
 .service-card h3,
 .process-step h3 {
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 0.6rem;
-    letter-spacing: -0.005em;
 }
 
-/* Kort-tekst */
 .card p,
 .service-card p,
 .process-step p,
 .review p {
     font-size: 1rem;
     line-height: 1.7;
-    color: var(--muted);
-}
-
-/* Grid spacing rundt kort */
-.services-grid,
-.why-grid,
-.process,
-.reviews {
-    gap: 2rem; /* mer luft mellom kort */
-}
-/* KNAPPER – moderne premium-design */
-.btn,
-.button,
-.cta-btn {
-    display: inline-block;
-    padding: 0.85rem 1.6rem;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: -0.01em;
-    background: #2563eb; /* blå */
-    color: #ffffff;
-    border: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
-}
-
-/* Hover-effekt */
-.btn:hover,
-.button:hover,
-.cta-btn:hover {
-    background: #1e40af; /* mørkere blå */
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
-}
-
-/* Sekundær knapp (lys variant) */
-.btn-secondary,
-.button-secondary {
-    background: #f1f5f9;
-    color: #1e293b;
-    border: 1px solid #cbd5e1;
-    box-shadow: none;
-}
-
-.btn-secondary:hover,
-.button-secondary:hover {
-    background: #e2e8f0;
-    border-color: #94a3b8;
-    transform: translateY(-2px);
-}
-:root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
-    --primary-light: #dbeafe;
-
-    --neutral-light: #f8fafc;
-    --neutral-mid: #e2e8f0;
-    --neutral-border: #cbd5e1;
-
-    --text-main: #0f172a;
-    --text-secondary: #334155;
-    --text-muted: #64748b;
-
-    --accent: #f59e0b;
-}
-body {
-    color: var(--text-main);
-}
-
-.section-intro,
-.card p,
-.service-card p,
-.process-step p,
-.review p {
     color: var(--text-muted);
 }
 
-.btn,
-.button,
-.cta-btn {
-    background: var(--primary);
-    color: #fff;
-}
+/* =========================================================
+   8. FOOTER (NY OG KONSISTENT)
+   ========================================================= */
 
-.btn:hover,
-.button:hover,
-.cta-btn:hover {
-    background: var(--primary-dark);
-}
-
-.btn-secondary {
-    background: var(--neutral-light);
-    color: var(--text-main);
-    border: 1px solid var(--neutral-border);
-}
-
-.section {
-    background: var(--neutral-light);
-}
-
-.section-alt {
-    background: var(--neutral-mid);
-}
-/* FOOTER – moderne, ren og premium */
 footer {
-    background: #0f172a; /* mørk blå/svart */
+    background: #0f172a;
     color: #e2e8f0;
     padding: 3.5rem 0;
-    text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Footer tekst */
-footer p {
-    margin: 0.4rem 0;
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.6;
-}
-
-/* Footer lenker */
-footer a {
-    color: #93c5fd;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.25s ease;
-}
-
-footer a:hover {
-    color: #bfdbfe;
-}
-
-/* Footer småseksjoner (hvis du bruker kolonner) */
 .footer-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto 2rem;
@@ -724,7 +294,6 @@ footer a:hover {
 .footer-grid ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-grid li {
@@ -733,19 +302,36 @@ footer a:hover {
 
 .footer-grid a {
     color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
 .footer-grid a:hover {
     color: #ffffff;
 }
 
-/* Mobiljusteringer */
+footer p {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+/* =========================================================
+   9. RESPONSIVITET
+   ========================================================= */
+
 @media (max-width: 800px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
     footer {
         padding: 2.8rem 0;
     }
-
-    .footer-grid {
-        gap: 1.5rem;
-    }
 }
+
