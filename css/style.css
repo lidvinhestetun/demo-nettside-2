@@ -440,3 +440,64 @@ body {
         position: static;
     }
 }
+/* TYPOGRAFI – moderne og premium */
+
+/* Generell tekst */
+body {
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+}
+
+/* H1 – hero og store overskrifter */
+h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+}
+
+/* H2 – seksjonstitler */
+.section h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.8rem;
+}
+
+/* H3 – korttitler */
+.card h3,
+.service-card h3,
+.process-step h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
+/* Brødtekst i kort */
+.card p,
+.service-card p,
+.process-step p,
+.review p,
+.about,
+.section-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Mobiljusteringer */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    body {
+        font-size: 0.97rem;
+    }
+}
