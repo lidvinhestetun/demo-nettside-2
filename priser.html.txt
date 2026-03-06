@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priser – Rørlegger AS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <span class="logo-mark">R</span>
+            <span class="logo-text">Rørlegger AS</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Hjem</a>
+            <a href="tjenester.html">Tjenester</a>
+            <a href="om-oss.html">Om oss</a>
+            <a href="prosjekter.html">Prosjekter</a>
+            <a href="priser.html" class="active">Priser</a>
+            <a href="faq.html">FAQ</a>
+            <a href="bestill-befaring.html">Bestill befaring</a>
+            <a href="kontakt.html" class="nav-cta">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="sub-hero">
+        <div class="container">
+            <h1>Priser</h1>
+            <p>Forutsigbare priser uten overraskelser. Vi er åpne og tydelige om hva ting koster.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid">
+
+            <div class="card">
+                <h3>Timepris</h3>
+                <p><strong>1 290 kr</strong> per time</p>
+                <p class="muted">Gjelder hverdager 08–16.</p>
+            </div>
+
+            <div class="card">
+                <h3>Utrykning</h3>
+                <p><strong>1 990 kr</strong></p>
+                <p class="muted">Fastpris for akutte oppdrag.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fastpris på småjobber</h3>
+                <p>Vi tilbyr fastpris på typiske oppdrag som montering av blandebatteri, oppvaskmaskin og toalett.</p>
+            </div>
+
+            <div class="card">
+                <h3>Materialer</h3>
+                <p>Vi bruker kvalitetsprodukter fra kjente leverandører. Pris varierer etter behov.</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
