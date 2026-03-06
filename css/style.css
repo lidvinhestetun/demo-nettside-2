@@ -411,6 +411,30 @@ footer p {
     margin: 0;
     text-shadow: 0 8px 28px rgba(0, 0, 0, 0.85);
 }
+.subpage-hero {
+    position: relative;
+    height: 300px; /* GI HERO-SEKSJONEN HØYDE */
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.subpage-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.45;
+    filter: grayscale(15%) brightness(0.85) contrast(0.95);
+    z-index: -1;
+}
+
+.subpage-hero-inner h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+    margin: 0;
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.85);
+}
 
 
 
