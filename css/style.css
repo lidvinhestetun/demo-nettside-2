@@ -168,7 +168,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../img/plumber-hero-bg.jpg");
+    background-image: url("../img/hero-industrial.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.18; /* svært lav lysstyrke */
