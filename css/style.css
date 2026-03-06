@@ -154,7 +154,7 @@ body {
 }
 
 /* =========================================================
-   HERO – maksimal kontrast og ekstremt tydelig tekst
+   HERO – optimalisert for lyse og detaljerte bilder
    ========================================================= */
 
 .hero {
@@ -163,7 +163,7 @@ body {
     color: #ffffff;
 }
 
-/* Bakgrunnsbilde – kraftig dempet */
+/* Bakgrunnsbilde – kraftig dempet for å unngå støy */
 .hero::before {
     content: "";
     position: absolute;
@@ -171,21 +171,20 @@ body {
     background-image: url("../img/plumber-hero-bg.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.22; /* svært lav lysstyrke */
-    filter: grayscale(25%) brightness(0.55) contrast(0.85);
+    opacity: 0.18; /* svært lav lysstyrke */
+    filter: grayscale(40%) brightness(0.45) contrast(0.7);
     z-index: -1;
 }
 
-/* Overlay – nesten helsort, men med dybde */
+/* Overlay – nesten helsort for maksimal tekstkontrast */
 .hero-bg-overlay {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.78),
-            rgba(0, 0, 0, 0.92)
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.90),
+        rgba(0, 0, 0, 0.96)
+    );
     z-index: -2;
 }
 
@@ -200,20 +199,20 @@ body {
 
 /* Tittel – ren hvit + kraftig skygge */
 .hero-text h1 {
-    font-size: clamp(2.3rem, 3vw + 1rem, 3.1rem);
+    font-size: clamp(2.4rem, 3vw + 1rem, 3.2rem);
     color: #ffffff;
     margin-bottom: 1rem;
-    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.85);
     letter-spacing: -0.01em;
 }
 
 /* Brødtekst – hvitere og mer punch */
 .hero-text p {
-    color: #f8fafc;
-    font-size: 1.1rem;
+    color: #f1f5f9;
+    font-size: 1.15rem;
     line-height: 1.75;
     margin-bottom: 1.25rem;
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
 }
 
 /* Badge – mer kontrast */
@@ -254,6 +253,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
