@@ -380,12 +380,12 @@ footer p {
 }
 
 /* =========================================================
-   SUBPAGE HERO – NY, OPTIMAL OG RENSKET
+   SUBPAGE HERO – JUSTERT FOR Å VISE HELE BILDET
    ========================================================= */
 
 .subpage-hero {
     position: relative;
-    height: 360px;
+    height: 480px; /* ØKT HØYDE FOR Å FÅ HELE PERSONEN MED */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,7 +399,7 @@ footer p {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    background-position: top; /* VIKTIG FOR Å FÅ HELE PERSONEN MED */
     background-repeat: no-repeat;
     z-index: -2;
     filter: grayscale(12%) brightness(0.78) contrast(1.05);
@@ -435,6 +435,7 @@ footer p {
     color: #e2e8f0;
     text-shadow: 0 6px 22px rgba(0, 0, 0, 0.75);
 }
+
 
 
 
